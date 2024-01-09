@@ -15,6 +15,21 @@ public function tiempos()
     {
         return $this->hasMany(Tiempo::class);
     }
-
+public function bebidaInventarios()
+    {
+        return $this->hasMany(Bebida_Inventario::class, 'personal_id');
+    }
+public function productoInventarios()
+    {
+        return $this->hasMany(Bebida_Inventario::class, 'personal_id');
+    }
+    public function rellenosInventarios()
+    {
+        return $this->hasMany(Relleno_Inventario::class, 'personal_id');
+    }
+    public function masasInventarios()
+    {
+        return $this->hasMany(Masa_Inventario::class, 'personal_id');
+    }
 
 }

@@ -2,23 +2,25 @@
 @section('title', 'personal')
 
 @section('content')
+<div class="section-content">
+</div>
 
 <header class="px-6 space-y-2 text-center">
-    <h1 class="font-serif text-3xl text-center text-orange-500 dark:text-orange-500">Personal</h1>
-</header>
+    <h1 id="title_name">Personal</h1>
+
 
 <div class="flex items-center">
     <form action="{{ route('personal.index') }}" method="GET" class="mb-4 flex-1">
         <div class="flex items-center">
             <label for="search" class="mr-2"></label>
             <input type="text" name="search" id="search" class="rounded border-gray-300 mr-2 py-2 px-3" value="{{ request()->input('search') }}" placeholder="Ingrese término de búsqueda...">
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Buscar</button>
+            <button type="submit" class="warning">Buscar</button>
         </div>
     </form>
 
     <div class="flex items-center justify-end flex-1">
         <div class="ml-auto">
-            <a class="inline-flex items-center px-7 py-2 text-xs font-semibold tracking-widest text-center text-white uppercase transition duration-150 ease-in-out border border-transparent rounded-md dark:text-sky-200 bg-slate-300 hover:bg-orange-400 active:bg-orange-400 focus:outline-none focus:border-sky-900 focus:shadow-outline-sky mx-3 my-1" href="{{ route('personal.create') }}">Crear</a>
+            <a class="success" href="{{ route('personal.create') }}">Crear</a>
         </div>
     </div>
 </div>
@@ -40,18 +42,18 @@
                 <tbody>
                     @forelse($personal as $persona)
                         <tr class="bg-slate-300 dark:bg-slate-300">
-                            <td class="whitespace-nowrap px-6 py-4">||{{ $persona->id }}||</td>
+                            <td class="whitespace-nowrap px-6 py-4">{{ $persona->id }}</td>
                             <td class="whitespace-nowrap px-6 py-4">
                                 <a class="text-stone-600 underline hover:text-stone-800" href="{{ route('personal.show', $persona) }}">
-                                    {{ $persona->Nombre }}||
+                                    {{ $persona->Nombre }}
                                 </a>
                             </td>
-                            <td class="whitespace-nowrap px-6 py-4">{{ $persona->Matricula }}||</td>
-                            <td class="whitespace-nowrap px-6 py-4">{{ $persona->Nip }}|</td>
-                            <td class="whitespace-nowrap px-6 py-4">{{ $persona->created_at }}||</td>
+                            <td class="whitespace-nowrap px-6 py-4">{{ $persona->Matricula }}</td>
+                            <td class="whitespace-nowrap px-6 py-4">{{ $persona->Nip }}</td>
+                            <td class="whitespace-nowrap px-6 py-4">{{ $persona->created_at }}</td>
                             <td class="whitespace-nowrap px-6 py-4">
                                 <form method="POST" action="{{ route('personal.destroy', $persona) }}">
-                                   ||@csrf
+                                   @csrf
                                     @method('DELETE')
                                     <button class="inline-flex items-center px-4 py-2 text-xs font-semibold tracking-widest text-center text-red-500 uppercase transition duration-150 ease-in-out dark:text-red-500/80 hover:text-red-600 focus:outline-none">Eliminar</button>
                                 </form>

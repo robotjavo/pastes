@@ -3,6 +3,8 @@
 
 
 @section('content')
+<div class="section-content">
+</div>
 	<h1 class="my-4 font-serif text-3xl text-center text-orange-500 dark:text-orange-500">Agregar empleado</h1>
 
 	@include('partials.validation-errors')

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>@yield('title', 'Real de Plateros')</title>
-
-
 </head>
     <style>
 
     </style>
 <body class="antialiased bg-zinc-900">
-
 @include('layouts.navigation')
 @yield('content')
 @if(session('success'))

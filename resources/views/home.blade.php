@@ -3,11 +3,10 @@
 @section('title', 'home')
 
 @section('content')
-<h1>Home</h1>
-
-
-
-
+<div class="div-content">  
+</div>
+<div class="section-content">
+</div>
 @endsection
 </body>
 </html>
