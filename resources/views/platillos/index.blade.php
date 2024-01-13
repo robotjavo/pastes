@@ -18,9 +18,13 @@
         </div>
 
         <div class="menu_pastes"id="tiempoRestante">Tiempo restante: </div>
+<<<<<<< HEAD
 <div class="menu_pastes">
 <a href="{{ route('platillos.create') }}" class="success">Agregar entrada</a>
 < <button href="{{ route('platillos.create') }}" class="warning">Agregar pastes</button>
+=======
+<div class="menu_pastes"> <button href="{{ route('platillos.create') }}" class="warning">Agregar pastes</button>
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
         <div>
         <!-- Mueve esta etiqueta script aquí -->
         <script src="{{ asset('js/temporizador.js') }}"></script>
@@ -37,7 +41,11 @@
     @endif
 
     <!-- Tabla de Platillos Preparados -->
+<<<<<<< HEAD
 
+=======
+    @if(count($platillosPreparados) > 0)
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
         <table>
             <thead>
                 <tr>
@@ -61,9 +69,15 @@
                 @endforeach
             </tbody>
         </table>
+<<<<<<< HEAD
 
         <p>No hay platillos preparados aún.</p>
 
+=======
+    @else
+        <p>No hay platillos preparados aún.</p>
+    @endif
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
 
     <!-- Enlace para crear nuevo platillo -->
 </div>

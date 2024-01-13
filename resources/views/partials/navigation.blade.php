@@ -12,7 +12,11 @@
 
 			<nav class="menu">
 				<li><a href="{{ route('home') }}">Inicio</a></li>
+<<<<<<< HEAD
 				<li><a href="{{route('venta.index')}}">Venta</a></li>
+=======
+				<li><a href="{{route('venta.venta')}}">Venta</a></li>
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
 				<li><a href="{{ route('platillos.index') }}">Pastes</a></li>
 				<li><a href="#">Inventario</a>
 					<ul class="menu-vertical">
@@ -20,7 +24,11 @@
 						<li onclick="window.location='{{ route('productos_inevetario.index') }}'">Inventario De Producto</li>
 						<li onclick="window.location='{{ route('rellenos_inevetario.index') }}'">Inventario De Rellenos</li>
 						<li onclick="window.location='{{ route('masas_inevetario.index') }}'" >Inventario De Masas</li>
+<<<<<<< HEAD
 					</ul>
+=======
+					</ul>			
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
 				</li>
 				<li><a href="{{ route('checador.index') }}">Checador</a></li>
         		<li><a href="{{ route('personal.index') }}">Personal</a></li>

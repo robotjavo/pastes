@@ -7,7 +7,13 @@ use App\Http\Controllers\Productos_IventarioController;
 use App\Http\Controllers\Rellenos_IventarioController;
 use App\Http\Controllers\Masas_IventarioController;
 use App\Http\Controllers\PlatilloController;
+<<<<<<< HEAD
 use App\Http\Controllers\VentasController;
+=======
+use App\Http\Controllers\VentaController;
+use App\Http\Controllers\venta_prueba;
+
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
 
 
 
@@ -15,14 +21,21 @@ use App\Http\Controllers\VentasController;
 
 Route::view('/', 'home')->name('home');
 Route::view('/inventario', 'inventario')->name('inventario');
+<<<<<<< HEAD
 //route::view('/venta','venta.venta')->name('venta');
+=======
+//Route::view('/venta','venta.venta')->name('venta');
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
 Route::view('/Historial', 'Historial')->name('Historial');
 //ventas
 
+<<<<<<< HEAD
 Route::get('/venta', 'App\Http\Controllers\VentasController@index')->name('venta.index');
 Route::post('/venta', 'App\Http\Controllers\VentasController@store')->name('venta.store');
 Route::post('/venta', 'App\Http\Controllers\VentasController@validateForm')->name('venta.validateForm');
 
+=======
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
 
 //PERSONAL
 Route::get('/personal', [PersonalController::class, 'index'])->name('personal.index');
@@ -92,3 +105,9 @@ Route::get('/platillos/{id}/edit', [PlatilloController::class, 'edit'])->name('p
 Route::put('/platillos/{id}', [PlatilloController::class, 'update'])->name('platillos.update');
 Route::delete('/platillos/{id}', [PlatilloController::class, 'destroy'])->name('platillos.destroy');
 
+<<<<<<< HEAD
+=======
+//ventas
+//Route::get('/venta', [venta_prueba::class, 'index'])->name('venta.venta');
+Route::get('/venta/venta', [venta_prueba::class, 'index'])->name('venta.venta');
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18

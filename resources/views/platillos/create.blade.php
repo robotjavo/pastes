@@ -19,7 +19,11 @@
         @endif
 
         <!-- Formulario para crear nuevo platillo -->
+<<<<<<< HEAD
         <form action="{{ route('platillos.store') }}" method="post">
+=======
+        <form action="{{ route('platillos.create') }}" method="post">
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
     @csrf
 <div class="space-y-4">
             <label for="nombre">Nombre del Platillo:</label>

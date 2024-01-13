@@ -16,10 +16,17 @@ return new class extends Migration
             $table->unsignedBigInteger('platillos_id');
             $table->unsignedBigInteger('bebidas_inventarios_id');
             $table->unsignedBigInteger('productos_inventarios_id');
+<<<<<<< HEAD
             $table->string('totalpagar');//total de a pagar
             $table->string('factura');//pregunta que debe ser si o no
             $table->integer('pago');//cantidad con la paga el cliente
             $table->string('cambio');//venta - pago
+=======
+            $table->string('venta');
+            $table->string('factura');
+            $table->integer('importe');
+            $table->string('cambio');
+>>>>>>> dee61fcc842fd365d308971cca2dd6450b868a18
             $table->timestamps();
 
             $table->foreign('platillos_id')->references('id')->on('platillos');
