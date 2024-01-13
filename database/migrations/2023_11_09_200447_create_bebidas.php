@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('bebidas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('bebida');
+            $table->string('tipo');
+            $table->string('cantidad');
+            $table->string('Precio');
 
             $table->timestamps();
         });

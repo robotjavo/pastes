@@ -2,24 +2,29 @@
 @section('title', 'Checador')
 
 @section('content')
-<h1>Checador de asistencia</h1>
-<div>
+
+<div class="section-content">
+</div>
+<h1 id="title_name">Checador de asistencia</h1>
+
+
+<div class="menu_pastes">
     <form action="{{ route('checador.index') }}" method="GET">
         <div class="flex space-x-4">
             <input type="text" name="Matricula" placeholder="Buscar por Matrícula" value="{{ request('Matricula') }}">
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2">Buscar</button>
+            <button type="submit" class="warning">Buscar</button>
         </div>
     </form>
 </div>
 
 <div class="flex items-center justify-end flex-1">
     <div class="ml-auto">
-        <a class="inline-flex items-center px-7 py-2 text-xs font-semibold tracking-widest text-center text-white uppercase transition duration-150 ease-in-out border border-transparent rounded-md dark:text-sky-200 bg-slate-300 hover:bg-orange-400 active:bg-orange-400 focus:outline-none focus:border-sky-900 focus:shadow-outline-sky mx-3 my-1" href="{{ route('checador.create') }}">Registro entrada</a>
+        <button class="success" href="{{ route('checador.create') }}">Registro entrada</button>
     </div>
 </div>
 <div class="flex items-center justify-end flex-1">
     <div class="ml-auto">
-        <a class="inline-flex items-center px-7 py-2 text-xs font-semibold tracking-widest text-center text-white uppercase transition duration-150 ease-in-out border border-transparent rounded-md dark:text-sky-200 bg-slate-300 hover:bg-orange-400 active:bg-orange-400 focus:outline-none focus:border-sky-900 focus:shadow-outline-sky mx-3 my-1" href="{{ route('checador.create_salida') }}">Registro salida</a>
+        <button class="danger" href="{{ route('checador.create_salida') }}">Registro salida</button>
     </div>
 </div>
 
